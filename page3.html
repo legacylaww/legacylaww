@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Gagan Anand | Legal Expertise Profile</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(37, 99, 235, 0.28), transparent 35%),
+        radial-gradient(circle at top right, rgba(20, 184, 166, 0.25), transparent 30%),
+        linear-gradient(135deg, #020617, #0f172a);
+      color: #e5e7eb;
+      line-height: 1.7;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      font-weight: 800;
+    }
+
+    .wrapper {
+      width: 90%;
+      max-width: 1220px;
+      margin: auto;
+    }
+
+    .navbar {
+      padding: 26px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .brand {
+      font-size: 26px;
+      font-weight: 900;
+      color: #ffffff;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      padding: 10px 15px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.08);
+      color: #dbeafe;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .hero {
+      min-height: 86vh;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 42px;
+      align-items: center;
+      padding: 50px 0 80px;
+    }
+
+    .hero-text {
+      padding: 38px;
+      border-radius: 34px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      backdrop-filter: blur(20px);
+      box-shadow: 0 30px 70px rgba(0, 0, 0, 0.35);
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 9px 17px;
+      border-radius: 999px;
+      background: rgba(20, 184, 166, 0.16);
+      color: #5eead4;
+      border: 1px solid rgba(94, 234, 212, 0.28);
+      font-size: 14px;
+      font-weight: 900;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: 58px;
+      line-height: 1.08;
+      color: #ffffff;
+      margin-bottom: 20px;
+    }
+
+    .hero-text p {
+      color: #cbd5e1;
+      font-size: 19px;
+      margin-bottom: 16px;
+    }
+
+    .hero-text p a,
+    .section p a,
+    .footer a {
+      color: #7dd3fc;
+      border-bottom: 2px solid #7dd3fc;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .btn {
+      padding: 14px 24px;
+      border-radius: 16px;
+      display: inline-block;
+      font-weight: 900;
+      transition: 0.3s ease;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #38bdf8, #14b8a6);
+      color: #020617;
+    }
+
+    .btn-outline {
+      border: 1px solid rgba(125, 211, 252, 0.55);
+      color: #7dd3fc;
+    }
+
+    .btn:hover {
+      transform: translateY(-4px);
+    }
+
+    .photo-panel {
+      position: relative;
+      padding: 18px;
+      border-radius: 36px;
+      background: linear-gradient(135deg, rgba(37,99,235,0.5), rgba(20,184,166,0.38));
+      box-shadow: 0 30px 80px rgba(37, 99, 235, 0.28);
+    }
+
+    .photo-panel::before {
+      content: "Legacy Law Offices LLP";
+      position: absolute;
+      top: 30px;
+      left: -28px;
+      transform: rotate(-90deg);
+      color: rgba(255, 255, 255, 0.65);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .photo-panel img {
+      width: 100%;
+      height: 530px;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+      border-radius: 28px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+    }
+
+    .photo-info {
+      margin-top: 16px;
+      padding: 18px;
+      border-radius: 22px;
+      background: rgba(2, 6, 23, 0.55);
+      color: #ffffff;
+      text-align: center;
+    }
+
+    .photo-info h2 {
+      font-size: 26px;
+      margin-bottom: 2px;
+    }
+
+    .photo-info p {
+      color: #cbd5e1;
+      font-size: 15px;
+    }
+
+    .quick-menu {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin: -35px 0 55px;
+      position: relative;
+      z-index: 5;
+    }
+
+    .quick-menu a {
+      padding: 20px;
+      border-radius: 24px;
+      background: #ffffff;
+      color: #111827;
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.18);
+      text-align: center;
+      transition: 0.3s ease;
+    }
+
+    .quick-menu a span {
+      display: block;
+      font-size: 24px;
+      margin-bottom: 6px;
+    }
+
+    .quick-menu a:hover {
+      transform: translateY(-7px);
+    }
+
+    .section {
+      margin-bottom: 38px;
+      padding: 34px;
+      border-radius: 34px;
+      background: rgba(255, 255, 255, 0.075);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(18px);
+      scroll-margin-top: 35px;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 18px;
+    }
+
+    .icon-box {
+      width: 62px;
+      height: 62px;
+      border-radius: 20px;
+      display: grid;
+      place-items: center;
+      font-size: 28px;
+      background: linear-gradient(135deg, #38bdf8, #14b8a6);
+      color: #020617;
+      flex-shrink: 0;
+    }
+
+    .section h2 {
+      color: #ffffff;
+      font-size: 36px;
+      line-height: 1.15;
+    }
+
+    .section p {
+      color: #cbd5e1;
+      font-size: 17px;
+      margin-bottom: 15px;
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+      margin-top: 24px;
+    }
+
+    .mini-card {
+      background: rgba(2, 6, 23, 0.42);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 24px;
+      padding: 24px;
+    }
+
+    .mini-card h3 {
+      color: #ffffff;
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .mini-card ul {
+      padding-left: 20px;
+    }
+
+    .mini-card li {
+      color: #cbd5e1;
+      margin-bottom: 8px;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .chip {
+      padding: 9px 14px;
+      border-radius: 999px;
+      background: rgba(56, 189, 248, 0.13);
+      color: #7dd3fc;
+      border: 1px solid rgba(125, 211, 252, 0.28);
+      font-weight: 800;
+      font-size: 14px;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 35px 0 45px;
+      color: #94a3b8;
+    }
+
+    @media (max-width: 950px) {
+      .hero,
+      .content-grid,
+      .quick-menu {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 40px;
+      }
+
+      .photo-panel img {
+        height: auto;
+      }
+
+      .photo-panel::before {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="wrapper">
+
+    <nav class="navbar">
+      <a class="brand" href="https://www.legacylawoffices.com/gagan-anand" target="_blank">
+        Gagan Anand
+      </a>
+
+      <div class="nav-links">
+        <a href="https://www.legacylawoffices.com/" target="_blank">Main Website</a>
+        <a href="https://www.legacylawoffices.com/gagan-anand" target="_blank">Official Profile</a>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-text">
+        <span class="badge">Infrastructure • PPP • FIDIC • Arbitration</span>
+
+        <h1>Legal Expertise Built Around Complex Infrastructure Projects</h1>
+
+        <p>
+          Gagan Anand is a globally recognized infrastructure and construction lawyer and Managing Partner of 
+          <a href="https://www.legacylawoffices.com/" target="_blank">Legacy Law Offices LLP</a>. 
+          He advises on infrastructure projects, public-private partnerships, construction contracts, FIDIC frameworks and dispute resolution.
+        </p>
+
+        <p>
+          His complete professional background, awards, publications and speaking engagements are available on his 
+          <a href="https://www.legacylawoffices.com/gagan-anand" target="_blank">official profile</a>.
+        </p>
+
+        <div class="hero-buttons">
+          <a class="btn btn-primary" href="https://www.legacylawoffices.com/gagan-anand" target="_blank">View Profile</a>
+          <a class="btn btn-outline" href="https://www.legacylawoffices.com/" target="_blank">Visit Website</a>
+        </div>
+      </div>
+
+      <div class="photo-panel">
+        <img 
+          src="https://legacylawoffices.com/storage/team-members/k6Y6ccPSmB3cE6yGKfMhTlNfKWajbtSWqjR3ygvP.webp" 
+          alt="Gagan Anand Managing Partner Legacy Law Offices LLP"
+        />
+
+        <div class="photo-info">
+          <h2>Gagan Anand</h2>
+          <p>Managing Partner, Legacy Law Offices LLP</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="quick-menu">
+      <a href="#overview"><span>01</span>Profile Overview</a>
+      <a href="#projects"><span>02</span>Projects & PPP</a>
+      <a href="#contracts"><span>03</span>Contracts & Disputes</a>
+      <a href="#recognition"><span>04</span>Recognition</a>
+    </div>
+
+    <section class="section" id="overview">
+      <div class="section-head">
+        <div class="icon-box">⚖</div>
+        <h2>Profile Overview</h2>
+      </div>
+
+      <p>
+        Gagan Anand is a fifth-generation advocate with over three decades of experience in project development, infrastructure advisory, construction law, public-private partnerships and complex dispute resolution.
+      </p>
+
+      <p>
+        As Managing Partner of 
+        <a href="https://www.legacylawoffices.com/" target="_blank">Legacy Law Offices LLP</a>, 
+        he has advised governments, multilateral institutions and private sector clients on high-value infrastructure, energy and transport projects.
+      </p>
+
+      <div class="content-grid">
+        <div class="mini-card">
+          <h3>Professional Identity</h3>
+          <ul>
+            <li>Managing Partner</li>
+            <li>Fifth-generation advocate</li>
+            <li>Dual-qualified in India and the United Kingdom</li>
+            <li>Infrastructure and construction law professional</li>
+          </ul>
+        </div>
+
+        <div class="mini-card">
+          <h3>Core Practice</h3>
+          <ul>
+            <li>Infrastructure projects</li>
+            <li>PPP and project structuring</li>
+            <li>FIDIC-based contracts</li>
+            <li>International arbitration and disputes</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="section-head">
+        <div class="icon-box">🏗</div>
+        <h2>Infrastructure, Energy & PPP Projects</h2>
+      </div>
+
+      <p>
+        His work covers project structuring, procurement strategy, concession agreements, contract management and legal risk mitigation for major infrastructure, energy and transport projects.
+      </p>
+
+      <p>
+        More details about his infrastructure experience can be explored through the 
+        <a href="https://www.legacylawoffices.com/gagan-anand" target="_blank">official profile</a>.
+      </p>
+
+      <div class="content-grid">
+        <div class="mini-card">
+          <h3>Project Experience</h3>
+          <ul>
+            <li>High-speed rail and metro systems</li>
+            <li>Dedicated freight corridors</li>
+            <li>Urban transport and public utilities</li>
+            <li>Large-scale real estate and township projects</li>
+          </ul>
+        </div>
+
+        <div class="mini-card">
+          <h3>PPP Advisory</h3>
+          <ul>
+            <li>Project structuring</li>
+            <li>Procurement frameworks</li>
+            <li>Concession agreements</li>
+            <li>Bid process management</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="chips">
+        <span class="chip">Infrastructure</span>
+        <span class="chip">Energy</span>
+        <span class="chip">Transport</span>
+        <span class="chip">PPP</span>
+        <span class="chip">Procurement</span>
+      </div>
+    </section>
+
+    <section class="section" id="contracts">
+      <div class="section-head">
+        <div class="icon-box">📑</div>
+        <h2>Construction Law, FIDIC & Disputes</h2>
+      </div>
+
+      <p>
+        Gagan Anand advises on FIDIC-based contracts, EPC frameworks, claims management, contract drafting, risk allocation and dispute avoidance strategies in complex construction environments.
+      </p>
+
+      <p>
+        His legal work through 
+        <a href="https://www.legacylawoffices.com/" target="_blank">Legacy Law Offices LLP</a> 
+        supports project owners, developers, contractors, authorities and investors.
+      </p>
+
+      <div class="content-grid">
+        <div class="mini-card">
+          <h3>Contract Advisory</h3>
+          <ul>
+            <li>FIDIC contract frameworks</li>
+            <li>EPC and turnkey contracts</li>
+            <li>Risk allocation</li>
+            <li>Contract management</li>
+          </ul>
+        </div>
+
+        <div class="mini-card">
+          <h3>Dispute Resolution</h3>
+          <ul>
+            <li>Construction arbitration</li>
+            <li>Delay and cost overrun claims</li>
+            <li>Variation and damages disputes</li>
+            <li>Complex claims management</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="chips">
+        <span class="chip">FIDIC</span>
+        <span class="chip">EPC</span>
+        <span class="chip">Claims</span>
+        <span class="chip">Arbitration</span>
+        <span class="chip">Risk Allocation</span>
+      </div>
+    </section>
+
+    <section class="section" id="recognition">
+      <div class="section-head">
+        <div class="icon-box">🏆</div>
+        <h2>Awards, Publications & Global Recognition</h2>
+      </div>
+
+      <p>
+        Gagan Anand has been recognized by leading legal directories and professional platforms, including Chambers & Partners, Legal 500, IFLR1000, Benchmark Litigation, AsiaLaw and India Business Law Journal.
+      </p>
+
+      <p>
+        His awards, recognitions, publications and international speaking engagements are listed on his 
+        <a href="https://www.legacylawoffices.com/gagan-anand" target="_blank">official profile</a>.
+      </p>
+
+      <div class="content-grid">
+        <div class="mini-card">
+          <h3>Awards & Rankings</h3>
+          <ul>
+            <li>National Law Day Award 2010</li>
+            <li>Chambers & Partners recognition</li>
+            <li>Legal 500 Recommended Lawyer</li>
+            <li>India Business Law Journal A-List recognition</li>
+          </ul>
+        </div>
+
+        <div class="mini-card">
+          <h3>Thought Leadership</h3>
+          <ul>
+            <li>IBA publications</li>
+            <li>Mondaq articles</li>
+            <li>FIDIC and IBA conferences</li>
+            <li>Infrastructure and construction law insights</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="chips">
+        <span class="chip">Chambers</span>
+        <span class="chip">Legal 500</span>
+        <span class="chip">IFLR1000</span>
+        <span class="chip">IBA</span>
+        <span class="chip">FIDIC</span>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>
+        Information based on publicly available professional details from 
+        <a href="https://www.legacylawoffices.com/" target="_blank">Legacy Law Offices LLP</a> 
+        and the 
+        <a href="https://www.legacylawoffices.com/gagan-anand" target="_blank">official profile of Gagan Anand</a>.
+      </p>
+    </footer>
+
+  </div>
+
+</body>
+</html>
