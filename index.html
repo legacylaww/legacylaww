@@ -62,8 +62,8 @@
       justify-content: space-between;
       align-items: center;
       position: relative;
-      z-index: 2;
-      margin-bottom: 90px;
+      z-index: 3;
+      margin-bottom: 70px;
     }
 
     .logo {
@@ -83,10 +83,17 @@
       border: 1px solid rgba(255, 255, 255, 0.25);
     }
 
-    .hero-content {
-      max-width: 950px;
+    .hero-layout {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 45px;
+      align-items: center;
       position: relative;
       z-index: 2;
+    }
+
+    .hero-content {
+      max-width: 900px;
     }
 
     .badge {
@@ -101,7 +108,7 @@
     }
 
     h1 {
-      font-size: 58px;
+      font-size: 56px;
       line-height: 1.1;
       margin-bottom: 24px;
     }
@@ -146,6 +153,32 @@
 
     .btn:hover {
       transform: translateY(-3px);
+    }
+
+    .profile-image-card {
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      border-radius: 30px;
+      padding: 18px;
+      backdrop-filter: blur(14px);
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+    }
+
+    .profile-image-card img {
+      width: 100%;
+      height: 460px;
+      object-fit: cover;
+      object-position: top center;
+      border-radius: 24px;
+      display: block;
+    }
+
+    .profile-image-caption {
+      margin-top: 14px;
+      text-align: center;
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 16px;
     }
 
     .container {
@@ -315,7 +348,15 @@
 
     @media (max-width: 900px) {
       h1 {
-        font-size: 42px;
+        font-size: 40px;
+      }
+
+      .hero-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .profile-image-card img {
+        height: auto;
       }
 
       .grid {
@@ -356,26 +397,41 @@
       </div>
     </nav>
 
-    <div class="hero-content">
-      <span class="badge">Managing Partner | Legacy Law Offices LLP</span>
+    <div class="hero-layout">
 
-      <h1>Gagan Anand – Infrastructure & Construction Lawyer</h1>
+      <div class="hero-content">
+        <span class="badge">Managing Partner | Legacy Law Offices LLP</span>
 
-      <p>
-        Gagan Anand is a globally recognized infrastructure and construction lawyer, a fifth-generation advocate, and the Managing Partner of 
-        <a class="inline-link" href="https://www.legacylawoffices.com/" target="_blank">Legacy Law Offices LLP</a>. 
-        His official profile can be viewed here: 
-        <a class="inline-link" href="https://www.legacylawoffices.com/gagan-anand" target="_blank">Gagan Anand Profile</a>.
-      </p>
+        <h1>Gagan Anand – Infrastructure & Construction Lawyer</h1>
 
-      <div class="cta">
-        <a href="https://www.legacylawoffices.com/gagan-anand" target="_blank" class="btn btn-primary">
-          View Official Profile
-        </a>
-        <a href="https://www.legacylawoffices.com/" target="_blank" class="btn btn-secondary">
-          Visit Main Website
-        </a>
+        <p>
+          Gagan Anand is a globally recognized infrastructure and construction lawyer, a fifth-generation advocate, and the Managing Partner of 
+          <a class="inline-link" href="https://www.legacylawoffices.com/" target="_blank">Legacy Law Offices LLP</a>. 
+          His official profile can be viewed here: 
+          <a class="inline-link" href="https://www.legacylawoffices.com/gagan-anand" target="_blank">Gagan Anand Profile</a>.
+        </p>
+
+        <div class="cta">
+          <a href="https://www.legacylawoffices.com/gagan-anand" target="_blank" class="btn btn-primary">
+            View Official Profile
+          </a>
+          <a href="https://www.legacylawoffices.com/" target="_blank" class="btn btn-secondary">
+            Visit Main Website
+          </a>
+        </div>
       </div>
+
+      <div class="profile-image-card">
+        <img 
+          src="https://legacylawoffices.com/storage/team-members/k6Y6ccPSmB3cE6yGKfMhTlNfKWajbtSWqjR3ygvP.webp" 
+          alt="Gagan Anand Managing Partner at Legacy Law Offices LLP"
+        />
+        <div class="profile-image-caption">
+          Gagan Anand<br />
+          Managing Partner, Legacy Law Offices LLP
+        </div>
+      </div>
+
     </div>
   </header>
 
